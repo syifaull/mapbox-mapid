@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Tugas Rekrutmen React Front End Developer MAPID
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Logo](https://mapid.co.id/img/mapid_logo_warna-min.png)
 
-## Available Scripts
+Tugas ini adalah sebagai syarat seleksi pertama untuk proses rekrutmen React Front End Developer MAPID. Akan diberikan repositori yang dibuat dengan Stateless components. Repositori tersebut berisi map yang terdapat titik-titik lokasi tempat dari API Mapid. Terdapat fitur menu untuk mensorting satu-persatu warna, dan darkmode.
 
-In the project directory, you can run:
+## Ketentuan
 
-### `npm start`
+- Buatlah react baru, pindahkan code yang diberikan berisi Stateless Components (Function Components) menjadi Statefull Components (Class Components) pada ReactJS. Beserta fitur-fiturnya.
+- Terdapat Error pada Popup di Stateless Components, Selesaikkan Error itu di Statefull Components. Contoh seperti gambar disamping.
+- Nilai tambahan :
+  - Menambahkan fitur diluar task.
+  - Modifies styling (dibolehkan memakai library lain).
+  - Clear code.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Package Wajib
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Mapbox](https://www.mapbox.com/)
+- [react-map-gl](https://urbica.github.io/react-map-gl/#/Introduction)
+- [react-redux](https://react-redux.js.org/)
+- [redux-toolkit](https://redux.js.org/)
 
-### `npm test`
+## API DAN DATA
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Endpoint get methode API
 
-### `npm run build`
+```http
+  https://geoserver.mapid.io/layers_new/get_layer?api_key=689c2279e0834a3ba82743432605e746&layer_id=628f1d7c84b953e79a7cd896&project_id=611eafa6be8a2635e15c4afc
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Parameter  | Description                                |
+| :--------- | :----------------------------------------- |
+| `type`     | FeatureCollection                          |
+| `features` | Array geometri titik dengan format geojson |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Respon data dari API tersebut adalah JSON dengan beberapa atribut yang perlu diperhatikan. Pada atribut level pertama kamu hanya perlu memperhatikan atribut dengan key “geojson”.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Parameter    | Description                                    |
+| :----------- | :--------------------------------------------- |
+| `type`       | FeatureCollection                              |
+| `geometry`   | coordinates: [longitude,latitude]              |
+| `properties` | { Nama: “Satu”, Status: “Kuning”, Angka: “10”} |
 
-### `npm run eject`
+## Pengiriman Tugas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Buatlah repositori github (atau platform repositori lainnya) berisi hasil tugas kemudian balas email ini dengan link repositori tersebut.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Jelaskan pada file readme
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+👉 Struktur file/folder hasil pengerjaan
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+👉 Cara penginstalan library, dan menjalanan aplikasi
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+👉 Fitur-fitur dasar sesuai rekrutmen, dan Fitur-fitur tambahan di luar rekrutmen (jika ada).
