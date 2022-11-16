@@ -13,6 +13,32 @@ Tugas ini adalah sebagai syarat seleksi pertama untuk proses rekrutmen React Fro
   - Modifies styling (dibolehkan memakai library lain).
   - Clear code.
 
+## Clone
+
+Clone projek ini
+
+```bash
+  git clone https://link-to-project
+```
+
+Masuk ke directory projek
+
+```bash
+  cd my-project
+```
+
+Instal package
+
+```bash
+  npm install
+```
+
+jalankan react
+
+```bash
+  npm run start
+```
+
 ### Package Wajib
 
 - [Mapbox](https://www.mapbox.com/)
