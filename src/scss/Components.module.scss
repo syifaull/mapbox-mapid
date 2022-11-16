@@ -41,7 +41,9 @@
     gap: 1rem;
 
     .buttonSort {
-      @include buttonStandart(60px, 60px, $white, $blue, $white);
+      @include buttonStandart(75px, 75px, $white, $blue, $white);
+      z-index: 99;
+      font-size: 1.4rem;
       p {
         font-size: 0;
         transition: 0.3s all ease-in;
@@ -96,6 +98,7 @@
     flex-direction: column;
     position: relative;
     margin-right: -55px;
+    margin-bottom: -1.3rem;
     background-color: aqua;
     height: 0;
     z-index: -1;
