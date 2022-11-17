@@ -23,7 +23,7 @@ const Layer = ({ data }) => {
             "#FFFF00",
             "#1B659D",
           ],
-          "circle-radius": 10,
+          "circle-radius": ["get", "circle_radius"],
           "circle-stroke-width": ["get", "circle_stroke_width"],
           "circle-stroke-color": ["get", "circle_stroke_color"],
         }}

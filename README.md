@@ -36,7 +36,7 @@ Instal package
 jalankan react
 
 ```bash
-  npm run start
+  npm start
 ```
 
 ### Package Wajib
@@ -78,3 +78,19 @@ Buatlah repositori github (atau platform repositori lainnya) berisi hasil tugas 
 👉 Cara penginstalan library, dan menjalanan aplikasi
 
 👉 Fitur-fitur dasar sesuai rekrutmen, dan Fitur-fitur tambahan di luar rekrutmen (jika ada).
+
+## Struktur folder
+
+👉 components
+
+- layer ➡️ Components Titik
+- menu ➡️ Components Menu
+- popup ➡️ Components Popup (error)
+
+👉 configs
+
+- DataApi ➡️ Kumpulan Data API
+- Store ➡️ Kumpulan Data Reducer
+- TokenStorage ➡️ Data Token (token diutamakan membuat sendiri)
+
+👉 scss ➡️ folder menyimpan styling
