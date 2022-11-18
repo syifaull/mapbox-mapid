@@ -18,7 +18,7 @@ Tugas ini adalah sebagai syarat seleksi pertama untuk proses rekrutmen React Fro
 Clone projek ini
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/movinoary/Tugas-Rekrutmen-Mapid.git
 ```
 
 Masuk ke directory projek
