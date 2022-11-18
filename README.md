@@ -24,7 +24,7 @@ Clone projek ini
 Masuk ke directory projek
 
 ```bash
-  cd my-project
+  cd Tugas-Rekrutmen-Mapid
 ```
 
 Instal package
@@ -36,7 +36,7 @@ Instal package
 jalankan react
 
 ```bash
-  npm start
+  npm run dev
 ```
 
 ### Package Wajib

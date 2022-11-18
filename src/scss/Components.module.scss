@@ -71,7 +71,7 @@
     gap: 0.5rem;
     margin-right: -55px;
     height: 100%;
-    transition: all ease-in-out 1s;
+    transition: all ease-in-out 0.3s;
 
     button {
       @include buttonStandart(50px, 50px, $white, $blue, $white);
