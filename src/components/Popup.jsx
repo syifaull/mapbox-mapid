@@ -14,12 +14,14 @@ const PopUp = ({ popupInfo, setPopupInfo }) => {
     <Popup
       longitude={popupInfo.geometry.coordinates[0]}
       latitude={popupInfo.geometry.coordinates[1]}
+      anchor="top"
       onClose={() => setPopupInfo(null)}
     >
       <div className={cssModule.Components.popUp}>
         <Card title="Nama" desc={popupInfo.properties.Nama} />
         <Card title="Status" desc={popupInfo.properties.Status} />
         <Card title="Angka" desc={popupInfo.properties.Angka} />
+        <p>ini popup</p>
       </div>
     </Popup>
   );

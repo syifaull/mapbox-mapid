@@ -1,5 +1,5 @@
 import React from "react";
-import { Source, Layer as Marker } from "react-map-gl";
+import { Layer as Marker, Source } from "react-map-gl";
 
 const Layer = ({ data }) => {
   return (

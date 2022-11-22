@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import Map from "react-map-gl";
-import * as Configs from "./configs";
-import * as Components from "./components";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { useEffect, useState } from "react";
+import Map from "react-map-gl";
+import { useDispatch, useSelector } from "react-redux";
+import { Route, Routes } from "react-router-dom";
+import * as Components from "./components";
+import * as Configs from "./configs";
 
 function App() {
   const { Datas } = useSelector((state) => state.dataApi);
@@ -21,21 +21,13 @@ function App() {
         {color ? (
           <>
             {data.properties.Status === color ? (
-              <Components.Layer
-                setPopupInfo={setPopupInfo}
-                data={data}
-                key={index}
-              />
+              <Components.Layer setPopupInfo={data} data={data} key={index} />
             ) : null}
           </>
         ) : (
           <>
             {Datas?.map((data, index) => (
-              <Components.Layer
-                setPopupInfo={setPopupInfo}
-                data={data}
-                key={index}
-              />
+              <Components.Layer setPopupInfo={data} data={data} key={index} />
             ))}
           </>
         )}
@@ -51,10 +43,15 @@ function App() {
     dark: "mapbox://styles/vinoarystio/cl6ttky7b000y14my3f7khdlk",
   };
 
+  // const showPopUp = () =>
+  //   Datas?.map((item, index) => {
+  //     return <Components.PopUp></Components.PopUp>;
+  //   });
+
   console.log(FilterColor);
   return (
     <Map
-      style={{ width: "100%", height: "100vh" }}
+      style={{ width: "90%", height: "100vh" }}
       mapStyle={styles[styleId]}
       initialViewState={{
         longitude: 107.608238,
@@ -73,6 +70,9 @@ function App() {
       {popupInfo && (
         <Components.PopUp popupInfo={popupInfo} setPopupInfo={setPopupInfo} />
       )}
+
+      {/* <Components.PopUp popupInfo={popupInfo} setPopupInfo={setPopupInfo} /> */}
+
       <Components.Menu setStyleId={setStyleId} />
     </Map>
   );
